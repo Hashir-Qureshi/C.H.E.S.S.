@@ -12,7 +12,11 @@ router.get(
   passport.authenticate("jwt", { session: false }),
   (req, res, next) => check_is_student(req, res, next),
   (req, res) => {
-    validators.do_attributes_exists(req.query, res, ["assignment_id"]);
+    result = validators.do_attributes_exists(req.query, res, ["assignment_id"]);
+
+    if (result !== undefined) {
+      return result;
+    }
 
     get_student(req, res, student => {
       where = {

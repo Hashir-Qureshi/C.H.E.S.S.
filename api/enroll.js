@@ -14,7 +14,12 @@ router.post(
   passport.authenticate("jwt", { session: false }),
   (req, res, next) => check_is_student(req, res, next),
   (req, res) => {
-    validators.do_attributes_exists(req.body, res, ["course_id"]);
+    result = validators.do_attributes_exists(req.body, res, ["course_id"]);
+
+    if (result !== undefined) {
+      return result;
+    }
+
     get_student(req, res, student => {
       const newEnrollment = db_models.enroll
         .create(

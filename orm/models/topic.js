@@ -12,7 +12,7 @@ module.exports = function(sequelize, DataTypes) {
 			type: DataTypes.STRING(100),
 			allowNull: false
 		},
-		created_by: {
+		teacher_id: {
 			type: DataTypes.INTEGER(11),
 			allowNull: false,
 			references: {
