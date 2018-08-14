@@ -14,10 +14,21 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "jsonwebtoken": "^8.3.0",
+    "lodash": "^4.17.10",
+    "mysql2": "^1.5.3",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "path": "^0.12.7",
+    "pathfinder-ui": "^1.0.3",
+    "sequelize": "^4.38.0"
   },
   "devDependencies": {
     "concurrently": "^3.6.1",
-    "nodemon": "^1.18.3"
+    "nodemon": "^1.18.3",
+    "sequelize-auto": "^0.4.29"
   }
 }
