@@ -1,0 +1,523 @@
+{
+  "info": {
+    "_postman_id": "c6480741-7d34-4f4a-ad86-f99aa895eb7d",
+    "name": "Chess (Local)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Register User (Student)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "password",
+              "value": "this is a bad password",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "shmuel-student@gmail.com",
+              "type": "text"
+            },
+            {
+              "key": "first_name",
+              "value": "Shmuel",
+              "type": "text"
+            },
+            {
+              "key": "last_name",
+              "value": "Kamensky",
+              "type": "text"
+            },
+            {
+              "key": "institution_name",
+              "value": "city tech",
+              "type": "text"
+            },
+            {
+              "key": "school_id",
+              "value": "123",
+              "sessionValue": "123",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/user/register/student",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "user", "register", "student"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login User (Student)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "password",
+              "value": "this is a bad password",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "shmuel-student@gmail.com",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/user/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "user", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register User (Admin)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Authorization",
+            "value": ""
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "password",
+              "value": "this is a bad password",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "shmuel-admin@gmail.com",
+              "type": "text"
+            },
+            {
+              "key": "first_name",
+              "value": "Shmuel",
+              "type": "text"
+            },
+            {
+              "key": "last_name",
+              "value": "Kamensky",
+              "type": "text"
+            },
+            {
+              "key": "institution_name",
+              "value": "city tech",
+              "type": "text"
+            },
+            {
+              "key": "school_id",
+              "value": "123",
+              "sessionValue": "123",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/user/register/db_administrator",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "user", "register", "db_administrator"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login User (Admin)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "password",
+              "value": "this is a bad password",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "shmuel-admin@gmail.com",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/user/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "user", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Register User (Teacher)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Authorization",
+            "value": ""
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "password",
+              "value": "this is a bad password",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "shmuel-teacher@gmail.com",
+              "type": "text"
+            },
+            {
+              "key": "first_name",
+              "value": "Shmuel",
+              "type": "text"
+            },
+            {
+              "key": "last_name",
+              "value": "Kamensky",
+              "type": "text"
+            },
+            {
+              "key": "institution_name",
+              "value": "city tech",
+              "type": "text"
+            },
+            {
+              "key": "school_id",
+              "value": "123",
+              "sessionValue": "123",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/user/register/teacher",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "user", "register", "teacher"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Login User (Teacher)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "password",
+              "value": "this is a bad password",
+              "type": "text"
+            },
+            {
+              "key": "email",
+              "value": "shmuel-teacher@gmail.com",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/user/login",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "user", "login"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Enroll In Course",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Authorization",
+            "value": ""
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "course_id",
+              "value": "8",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/enroll/create",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "enroll", "create"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Create Course (Teacher)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/x-www-form-urlencoded"
+          },
+          {
+            "key": "Authorization",
+            "value": ""
+          }
+        ],
+        "body": {
+          "mode": "urlencoded",
+          "urlencoded": [
+            {
+              "key": "course_name",
+              "value": "The Physics Of Biochemical Medical Calculus Engineering",
+              "type": "text"
+            },
+            {
+              "key": "section_num",
+              "value": "1834",
+              "type": "text"
+            },
+            {
+              "key": "semester",
+              "value": "Fall",
+              "type": "text"
+            },
+            {
+              "key": "year",
+              "value": "2019",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/course/create",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "course", "create"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get enrolled courses",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/course/enrolled",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "course", "enrolled"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get assignments",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/course/enrolled",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "course", "enrolled"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get grade",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/course/enrolled",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "course", "enrolled"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get Roles",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/user/check_roles",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "user", "check_roles"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Get All Courses (Teacher)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/course/all",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "course", "all"]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "Search Topics",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Authorization",
+            "value": ""
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": ""
+        },
+        "url": {
+          "raw": "http://localhost:8000/api/topic/search?search_query=hello",
+          "protocol": "http",
+          "host": ["localhost"],
+          "port": "8000",
+          "path": ["api", "topic", "search"],
+          "query": [
+            {
+              "key": "search_query",
+              "value": "hello"
+            }
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}

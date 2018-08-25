@@ -173,8 +173,8 @@ router.post("/login", (req, res) => {
 
 router.post(
   "/register/teacher",
-  passport.authenticate("jwt", { session: false }),
-  (req, res, next) => check_is_admin(req, res, next),
+  //passport.authenticate("jwt", { session: false }),
+  // (req, res, next) => check_is_admin(req, res, next),
   (req, res, next) => {
     role = { is_student: false, is_teacher: true, is_db_administrator: false };
     register_user(req, res, next, role);

@@ -1,7 +1,7 @@
-dev_database_url = "mysql://root:root@localhost:3306/c.h.e.s.s.";
+dev_database_url = "mysql://root:root@localhost:3306/chess";
 DATABASE_URL = process.env.DATABASE_URL || dev_database_url;
 db_obj = {};
-db_obj.database = process.env.DATABASENAME || "c.h.e.s.s.";
+db_obj.database = process.env.DATABASENAME || "chess";
 db_obj.username = process.env.DATABASEUSERNAME || "root";
 db_obj.password = process.env.DATABASEPASSWORD || "root";
 db_obj.host = process.env.DATABASEHOST || "localhost";
