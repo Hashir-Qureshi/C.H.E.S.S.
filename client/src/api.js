@@ -2,7 +2,12 @@
 import axios from "axios";
 
 // files
-import { setCourses, addCourse } from "./actions/courses";
+import {
+  startSetCourses,
+  setCourses,
+  setCoursesFailed,
+  addCourse
+} from "./actions/courses";
 
 // Will move to different file or have seperate configuration later
 const AUTH_TOKEN = "";
@@ -10,8 +15,9 @@ axios.defaults.headers.common["Authorization"] = AUTH_TOKEN;
 axios.defaults.headers.post["Content-Type"] =
   "application/x-www-form-urlencoded";
 
-export const startSetCourses = () => {
+export const fetchCourses = () => {
   return dispatch => {
+    dispatch(startSetCourses());
     return axios
       .get("/api/courses/all")
       .then(response => {
@@ -19,11 +25,11 @@ export const startSetCourses = () => {
           dispatch(setCourses(response.data));
         }
       })
-      .catch(error => console.log(error));
+      .catch(error => dispatch(setCoursesFailed(error)));
   };
 };
 
-export const startAddCourse = (courseName, section, semester, year) => {
+export const addCourse = (courseName, section, semester, year) => {
   return dispatch => {
     axios
       .post("/api/course/create", {

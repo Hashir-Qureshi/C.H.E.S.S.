@@ -1,5 +1,9 @@
+export const startSetCourses = () => ({
+  type: "SET_COURSES_REQUEST"
+});
+
 export const setCourses = courses => ({
-  type: "SET_COURSES",
+  type: "SET_COURSES_SUCCESS",
   courses
 });
 
