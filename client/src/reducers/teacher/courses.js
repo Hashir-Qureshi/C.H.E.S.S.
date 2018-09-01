@@ -8,14 +8,13 @@ export default (state = initialState, action) => {
     case "SET_COURSES_REQUEST":
       return { ...state, isFetching: true };
     case "SET_COURSES_SUCCESS":
-      return { ...state, courseList: action.courses, isFetching: false };
+      return { courseList: action.courses, isFetching: false };
     case "SET_COURSES_FAILURE":
       return { ...state, isFetching: false, error: action.error };
     case "ADD_COURSE_REQUEST":
       return { ...state, isFetching: true };
     case "ADD_COURSE_SUCCESS":
       return {
-        ...state,
         courseList: [...state.courseList, action.course],
         isFetching: false
       };

@@ -10,7 +10,6 @@ export default (state = initialState, action) => {
       return { ...state, isFetching: true };
     case "SET_ENROLLED_COURSES_SUCCESS":
       return {
-        ...state,
         enrolledCourses: action.enrolledCourses,
         isFetching: false
       };
@@ -20,8 +19,8 @@ export default (state = initialState, action) => {
       return { ...state, isFetching: true };
     case "ENROLL_FOR_COURSE_SUCCESS":
       return {
-        ...state,
-        enrolledCourses: [...state.enrolledCourses, action.enrolledCourse]
+        enrolledCourses: [...state.enrolledCourses, action.enrolledCourse],
+        isFetching: false
       };
     case "ENROLL_FOR_COURSE_FAILURE":
       return { ...state, isFetching: false, error: action.error };
